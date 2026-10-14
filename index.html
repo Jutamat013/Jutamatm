@@ -6,7 +6,7 @@
     <title>Jutamat Onkham - Academic Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Prompt & Inter -->
+    <!-- Font Prompt -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -36,15 +36,15 @@
     <!-- Header / Hero Section -->
     <header id="about" class="max-w-5xl mx-auto px-6 pt-12 pb-16 md:pt-20 md:pb-24">
         <div class="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col md:flex-row items-center gap-10">
-            <!-- Profile Image -->
-            <div class="relative group">
+            <!-- Profile Image Section -->
+            <div class="relative group shrink-0">
                 <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
                 <!-- 
-                  อ้างอิงรูป profile.jpg ใน Repository เดียวกัน 
-                  หรือรูปภาพที่คุณอัปโหลดไว้ใน GitHub 
+                  แสดงรูปภาพ Profile.jpg จากโฟลเดอร์เดียวกันบน GitHub 
+                  หากโหลดไม่ขึ้น จะสลับไปดึง profile.jpg หรือ Raw GitHub URL อัตโนมัติ
                 -->
-                <img src="profile.jpg" 
-                     onerror="this.onerror=null; this.src='profile.png';"
+                <img src="Profile.jpg" 
+                     onerror="this.onerror=null; this.src='profile.jpg'; if(!this.src.includes('raw')) this.src='https://raw.githubusercontent.com/Jutamat013/Jutamatm/main/Profile.jpg';"
                      alt="นางสาวจุฑามาศ อ่อนคำ" 
                      class="relative w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-white shadow-md">
             </div>
