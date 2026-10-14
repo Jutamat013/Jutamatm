@@ -3,417 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>จุฑามาศ อ่อนคำ - Academic Portfolio</title>
-    <!-- Google Fonts: Prompt & Sarabun -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Jutamat Onkham - Academic Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Prompt & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Sarabun', 'sans-serif'],
-                        heading: ['Prompt', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#f0fdf4',
-                            100: '#dcfce7',
-                            500: '#22c55e',
-                            600: '#16a34a',
-                            700: '#15803d',
-                            900: '#14532d',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        body {
-            font-family: 'Sarabun', sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6, .font-heading {
-            font-family: 'Prompt', sans-serif;
-        }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(229, 231, 235, 0.8);
-        }
-        .dark .glass-card {
-            background: rgba(30, 41, 59, 0.85);
-            border: 1px solid rgba(51, 65, 85, 0.8);
-        }
+        body { font-family: 'Prompt', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
 
     <!-- Navigation Bar -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass-card transition-all duration-300 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-3">
-                    <span class="w-9 h-9 rounded-full bg-emerald-600 text-white flex items-center justify-center font-heading font-bold text-lg shadow-md shadow-emerald-500/20">
-                        J
-                    </span>
-                    <span class="font-heading font-bold text-lg text-slate-800 dark:text-white tracking-wide">
-                        JUTAMAT<span class="text-emerald-600 dark:text-emerald-400">.</span>
-                    </span>
-                </div>
-
-                <!-- Desktop Nav Items -->
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#about" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">เกี่ยวกับฉัน</a>
-                    <a href="#education" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">ประวัติการศึกษา</a>
-                    <a href="#family" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">ข้อมูลครอบครัว</a>
-                    <a href="#contact" class="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">ติดต่อ</a>
-                </div>
-
-                <!-- Actions -->
-                <div class="flex items-center gap-3">
-                    <button id="themeToggle" class="p-2.5 rounded-full hover:bg-slate-200/60 dark:hover:bg-slate-700/60 text-slate-600 dark:text-slate-300 transition-colors">
-                        <i class="fa-solid fa-moon dark:hidden text-lg"></i>
-                        <i class="fa-solid fa-sun hidden dark:block text-lg text-amber-400"></i>
-                    </button>
-                    <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-200/60 dark:hover:bg-slate-700/60">
-                        <i class="fa-solid fa-bars text-xl"></i>
-                    </button>
-                </div>
+    <nav class="bg-white/80 backdrop-blur-md border-b border-slate-200/80 sticky top-0 z-50 transition-all">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#" class="text-xl font-bold tracking-tight text-slate-900">
+                JUTAMAT<span class="text-teal-600">.PORT</span>
+            </a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-teal-600 transition">เกี่ยวกับฉัน</a>
+                <a href="#education" class="hover:text-teal-600 transition">ประวัติการศึกษา</a>
+                <a href="#family" class="hover:text-teal-600 transition">ข้อมูลครอบครัว</a>
+                <a href="#contact" class="hover:text-teal-600 transition">ช่องทางการติดต่อ</a>
             </div>
-        </div>
-
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white/95 dark:bg-slate-900/95 px-4 pt-2 pb-4 space-y-2 text-sm font-medium">
-            <a href="#about" class="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400">เกี่ยวกับฉัน</a>
-            <a href="#education" class="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400">ประวัติการศึกษา</a>
-            <a href="#family" class="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400">ข้อมูลครอบครัว</a>
-            <a href="#contact" class="block py-2 hover:text-emerald-600 dark:hover:text-emerald-400">ติดต่อ</a>
         </div>
     </nav>
 
-    <!-- Hero / About Section -->
-    <section id="about" class="pt-28 pb-16 md:pt-36 md:pb-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-12 gap-8 lg:gap-12 items-center">
-            
-            <!-- Image Profile -->
-            <div class="md:col-span-5 flex justify-center">
-                <div class="relative">
-                    <div class="absolute -inset-1.5 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl blur opacity-30 dark:opacity-40"></div>
-                    <div class="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-200">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
-                             alt="นางสาวจุฑามาศ อ่อนคำ" 
-                             class="w-full h-full object-cover object-center"
-                             onerror="this.onerror=null; this.src='https://placehold.co/400x400/e2e8f0/475569?text=Jutamat';">
-                    </div>
-                </div>
+    <!-- Header / Hero Section -->
+    <header id="about" class="max-w-5xl mx-auto px-6 pt-12 pb-16 md:pt-20 md:pb-24">
+        <div class="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-xl shadow-slate-200/50 flex flex-col md:flex-row items-center gap-10">
+            <!-- Profile Image -->
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                <!-- 
+                  อ้างอิงรูป profile.jpg ใน Repository เดียวกัน 
+                  หรือรูปภาพที่คุณอัปโหลดไว้ใน GitHub 
+                -->
+                <img src="profile.jpg" 
+                     onerror="this.onerror=null; this.src='profile.png';"
+                     alt="นางสาวจุฑามาศ อ่อนคำ" 
+                     class="relative w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-white shadow-md">
             </div>
 
             <!-- Profile Info -->
-            <div class="md:col-span-7 space-y-6 text-center md:text-left">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/50">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    แผนการเรียน วิทย์-คณิต (Science-Math)
+            <div class="flex-1 text-center md:text-left space-y-4">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-semibold tracking-wide">
+                    <span class="w-2 h-2 rounded-full bg-teal-500 animate-pulse"></span>
+                    นักศึกษาชั้นปีที่ 1
                 </div>
-
-                <div class="space-y-2">
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
-                        นางสาวจุฑามาศ อ่อนคำ
-                    </h1>
-                    <p class="text-lg text-emerald-600 dark:text-emerald-400 font-heading font-medium">
-                        Juthamat Onkham &bull; อายุ 19 ปี
-                    </p>
-                </div>
-
-                <p class="text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl text-base">
-                    ยินดีต้อนรับสู่พอร์ตโฟลิโอรวบรวมประวัติการศึกษา ผลงาน และข้อมูลส่วนตัว 
-                    มุ่งมั่นพัฒนาตนเองทางด้านวิทยาศาตร์และเทคโนโลยี พร้อมสำหรับการเรียนรู้สิ่งใหม่ในระดับอุดมศึกษา
+                
+                <h1 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+                    นางสาวจุฑามาศ อ่อนคำ
+                </h1>
+                
+                <p class="text-slate-600 leading-relaxed text-base md:text-lg">
+                    ปัจจุบันกำลังศึกษาอยู่ในระดับอุดมศึกษา ชั้นปีที่ 1 ณ <span class="font-semibold text-slate-800">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</span> สำเร็จการศึกษาแผนการเรียนวิทยาศาสตร์-คณิตศาสตร์ ด้วยเกรดเฉลี่ยสะสม 3.62
                 </p>
 
-                <!-- Personal Info Details Grid -->
-                <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 pt-2 text-left">
-                    <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
-                        <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">วันเกิด</span>
-                        <span class="text-sm font-medium text-slate-800 dark:text-slate-200">13 มกราคม พ.ศ. 2550</span>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm">
-                        <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">สัญชาติ / เชื้อชาติ</span>
-                        <span class="text-sm font-medium text-slate-800 dark:text-slate-200">ไทย / ไทย</span>
-                    </div>
-                    <div class="p-3.5 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200/80 dark:border-slate-700/60 shadow-sm col-span-2">
-                        <span class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">ที่อยู่ปัจจุบัน</span>
-                        <span class="text-sm font-medium text-slate-800 dark:text-slate-200">
-                            161 หมู่ 12 บ้านหนองแสง ต.พระลับ อ.เมืองขอนแก่น จ.ขอนแก่น 40000
-                        </span>
-                    </div>
-                </div>
-
-                <!-- Quick Action Buttons -->
-                <div class="pt-2 flex flex-wrap gap-3 justify-center md:justify-start">
-                    <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm transition-all shadow-md shadow-emerald-600/20">
-                        <i class="fa-solid fa-envelope"></i> ติดต่อฉัน
-                    </a>
-                    <a href="#education" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 font-medium text-sm transition-all">
-                        <i class="fa-solid fa-graduation-cap"></i> ประวัติการศึกษา
-                    </a>
+                <!-- Personal Details Badges -->
+                <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2 text-xs text-slate-600 font-medium">
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200/60"><i class="fa-regular fa-calendar-days text-teal-600 mr-1.5"></i> เกิด 13 ม.ค. 2550</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200/60"><i class="fa-regular fa-user text-teal-600 mr-1.5"></i> อายุ 19 ปี</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200/60"><i class="fa-solid fa-flag text-teal-600 mr-1.5"></i> สัญชาติไทย / เชื้อชาติไทย</span>
+                    <span class="bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200/60"><i class="fa-solid fa-flask text-teal-600 mr-1.5"></i> แผน วิทย์-คณิต</span>
                 </div>
             </div>
-
         </div>
-    </section>
+    </header>
 
-    <!-- Education Timeline Section -->
-    <section id="education" class="py-16 bg-slate-100/70 dark:bg-slate-800/40 border-y border-slate-200/80 dark:border-slate-800">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">ประวัติการศึกษา</h2>
-                <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">Educational Background & Academic Achievements</p>
-                <div class="w-12 h-1 bg-emerald-500 mx-auto mt-3 rounded-full"></div>
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-6 space-y-16 pb-20">
+
+        <!-- Education Section -->
+        <section id="education" class="space-y-8">
+            <div class="text-center md:text-left space-y-2">
+                <h2 class="text-2xl font-bold text-slate-900 flex items-center justify-center md:justify-start gap-3">
+                    <div class="p-2 bg-teal-100 text-teal-700 rounded-xl">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    ประวัติการศึกษา (Education)
+                </h2>
+                <p class="text-slate-500 text-sm">เส้นทางการศึกษาตั้งแต่ระดับปฐมวัยจนถึงระดับอุดมศึกษา</p>
             </div>
 
-            <!-- Timeline Component -->
-            <div class="relative border-l-2 border-emerald-500/30 dark:border-emerald-500/20 ml-4 md:ml-32 space-y-10">
+            <!-- Timeline Grid -->
+            <div class="relative border-l-2 border-teal-100 ml-4 md:ml-6 space-y-8">
                 
-                <!-- Timeline Item 3: Senior High School -->
-                <div class="relative pl-6 sm:pl-8 group">
-                    <!-- Icon Marker -->
-                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center ring-4 ring-slate-100 dark:ring-slate-900 shadow-md group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-user-graduate text-xs"></i>
+                <!-- 1. Higher Education (Current) -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-teal-600 border-4 border-white shadow-sm ring-4 ring-teal-100"></div>
+                    <div class="bg-gradient-to-r from-teal-50/50 to-emerald-50/30 p-6 rounded-2xl border border-teal-100 shadow-sm transition hover:shadow-md">
+                        <span class="inline-block px-2.5 py-1 bg-teal-600 text-white text-xs font-semibold rounded-md mb-2">ปัจจุบัน (กำลังศึกษา)</span>
+                        <h3 class="text-lg font-bold text-slate-900">ระดับอุดมศึกษา ชั้นปีที่ 1</h3>
+                        <p class="text-teal-700 font-semibold text-sm mt-0.5">วิทยาลัยการสาธารณสุขสิรินธร จังหวัดขอนแก่น</p>
                     </div>
+                </div>
 
-                    <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                            <div>
-                                <span class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300 mb-1">
-                                    ระดับมัธยมศึกษาตอนปลาย
-                                </span>
-                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">โรงเรียนวัดศรีจันทร์</h3>
-                            </div>
-                            <div class="sm:text-right">
-                                <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-amber-100 text-amber-900 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800/40">
-                                    <i class="fa-solid fa-star text-amber-500"></i> GPA 6 ภาคเรียน: <strong class="text-sm">3.62</strong>
-                                </span>
-                            </div>
+                <!-- 2. High School -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white group-hover:bg-teal-500 transition"></div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md">
+                        <span class="text-xs font-semibold text-slate-400 block mb-1">มัธยมศึกษาตอนปลาย</span>
+                        <h3 class="text-lg font-bold text-slate-900">โรงเรียนวัดศรีจันทร์</h3>
+                        <p class="text-slate-600 text-sm mt-1">แผนการเรียน: วิทยาศาสตร์ - คณิตศาสตร์</p>
+                        <div class="mt-3 inline-flex items-center text-xs font-semibold text-teal-700 bg-teal-50 border border-teal-100 px-3 py-1.5 rounded-lg">
+                            <i class="fa-solid fa-award mr-1.5"></i> เกรดเฉลี่ยสะสม 6 ภาคเรียน: 3.62
                         </div>
-                        <p class="text-sm text-slate-600 dark:text-slate-300">
-                            <strong>แผนการเรียน:</strong> วิทยาศาสตร์ - คณิตศาสตร์ (วิทย์-คณิต)
-                        </p>
-                        <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">
-                            <i class="fa-solid fa-location-dot mr-1"></i> อ.เมืองขอนแก่น จ.ขอนแก่น
-                        </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 2: Junior High School -->
-                <div class="relative pl-6 sm:pl-8 group">
-                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-teal-600 text-white flex items-center justify-center ring-4 ring-slate-100 dark:ring-slate-900 shadow-md group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-school text-xs"></i>
-                    </div>
-
-                    <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                            <div>
-                                <span class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-200 mb-1">
-                                    ระดับมัธยมศึกษาตอนต้น
-                                </span>
-                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">โรงเรียนวัดศรีจันทร์</h3>
-                            </div>
-                            <div class="sm:text-right">
-                                <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
-                                    เกรดเฉลี่ยสะสม: <strong class="text-sm">2.94</strong>
-                                </span>
-                            </div>
+                <!-- 3. Junior High School -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white group-hover:bg-teal-500 transition"></div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md">
+                        <span class="text-xs font-semibold text-slate-400 block mb-1">มัธยมศึกษาตอนต้น</span>
+                        <h3 class="text-lg font-bold text-slate-900">โรงเรียนวัดศรีจันทร์</h3>
+                        <div class="mt-3 inline-flex items-center text-xs font-semibold text-slate-600 bg-slate-100 px-3 py-1.5 rounded-lg">
+                            เกรดเฉลี่ยสะสม: 2.94
                         </div>
-                        <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">
-                            <i class="fa-solid fa-location-dot mr-1"></i> อ.เมืองขอนแก่น จ.ขอนแก่น
-                        </p>
                     </div>
                 </div>
 
-                <!-- Timeline Item 1: Primary School -->
-                <div class="relative pl-6 sm:pl-8 group">
-                    <div class="absolute -left-[17px] top-1.5 w-8 h-8 rounded-full bg-slate-400 text-white flex items-center justify-center ring-4 ring-slate-100 dark:ring-slate-900 shadow-md group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-book-open text-xs"></i>
+                <!-- 4. Kindergarten / Primary School -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white group-hover:bg-teal-500 transition"></div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm transition hover:shadow-md">
+                        <span class="text-xs font-semibold text-slate-400 block mb-1">ระดับปฐมวัย</span>
+                        <h3 class="text-lg font-bold text-slate-900">โรงเรียนวัดศรีจันทร์</h3>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Family & Contact Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Family Info Section -->
+            <section id="family" class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                    <div class="p-2 bg-emerald-100 text-emerald-700 rounded-xl">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    ข้อมูลครอบครัว
+                </h2>
+
+                <div class="space-y-4">
+                    <!-- Father -->
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">บิดา</div>
+                        <div class="text-base font-bold text-slate-800">นายพยัค อ่อนคำ</div>
+                        <div class="text-sm text-slate-600"><i class="fa-solid fa-briefcase text-slate-400 mr-2"></i>อาชีพ: กองช่าง อบต.</div>
+                        <div class="text-sm text-slate-600"><i class="fa-solid fa-phone text-slate-400 mr-2"></i>โทร: <a href="tel:0855624636" class="hover:text-teal-600">085-562-4636</a></div>
                     </div>
 
-                    <div class="glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                            <div>
-                                <span class="inline-block px-2.5 py-0.5 rounded text-xs font-semibold bg-slate-200 text-slate-800 dark:bg-slate-700 dark:text-slate-200 mb-1">
-                                    ระดับประถมศึกษา / ประฐมวัย
-                                </span>
-                                <h3 class="text-lg font-bold text-slate-900 dark:text-white">โรงเรียนวัดศรีจันทร์</h3>
-                            </div>
+                    <!-- Mother -->
+                    <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
+                        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">มารดา</div>
+                        <div class="text-base font-bold text-slate-800">นางปรียา อารีเอื้อ</div>
+                        <div class="text-sm text-slate-600"><i class="fa-solid fa-briefcase text-slate-400 mr-2"></i>อาชีพ: แม่บ้าน</div>
+                        <div class="text-sm text-slate-600"><i class="fa-solid fa-phone text-slate-400 mr-2"></i>โทร: <a href="tel:0855967807" class="hover:text-teal-600">085-596-7807</a></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm space-y-6">
+                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-3">
+                    <div class="p-2 bg-teal-100 text-teal-700 rounded-xl">
+                        <i class="fa-solid fa-address-book"></i>
+                    </div>
+                    ข้อมูลการติดต่อ
+                </h2>
+
+                <ul class="space-y-3.5 text-sm">
+                    <li class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-teal-600 shrink-0 mt-0.5">
+                            <i class="fa-solid fa-phone"></i>
                         </div>
-                        <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">
-                            <i class="fa-solid fa-location-dot mr-1"></i> อ.เมืองขอนแก่น จ.ขอนแก่น
-                        </p>
-                    </div>
-                </div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-medium">เบอร์โทรศัพท์</span>
+                            <a href="tel:0639728088" class="font-semibold text-slate-700 hover:text-teal-600">063-972-8088</a>
+                        </div>
+                    </li>
 
-            </div>
+                    <li class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-teal-600 shrink-0 mt-0.5">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-medium">อีเมล</span>
+                            <a href="mailto:jutamatonkham@gmail.com" class="font-semibold text-slate-700 hover:text-teal-600 break-all">jutamatonkham@gmail.com</a>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-teal-600 shrink-0 mt-0.5">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-medium">Facebook</span>
+                            <span class="font-semibold text-slate-700">Fxng Jutamat</span>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-teal-600 shrink-0 mt-0.5">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-medium">Instagram</span>
+                            <span class="font-semibold text-slate-700">fxngp</span>
+                        </div>
+                    </li>
+
+                    <li class="flex items-start gap-3 pt-2 border-t border-slate-100">
+                        <div class="w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center text-teal-600 shrink-0 mt-0.5">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs text-slate-400 font-medium">ที่อยู่ปัจจุบัน</span>
+                            <span class="text-slate-600 leading-relaxed block">
+                                บ้านเลขที่ 161 หมู่ 12 บ้านหนองแสง ต.พระลับ อ.เมืองขอนแก่น จ.ขอนแก่น 40000
+                            </span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
         </div>
-    </section>
 
-    <!-- Family Background Section -->
-    <section id="family" class="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">ข้อมูลครอบครัว</h2>
-            <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">Family Information</p>
-            <div class="w-12 h-1 bg-emerald-500 mx-auto mt-3 rounded-full"></div>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <!-- Father Card -->
-            <div class="glass-card p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/50 transition-all">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl shrink-0">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <div>
-                        <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">ข้อมูลบิดา</span>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">นายพยัค อ่อนคำ</h3>
-                    </div>
-                </div>
-                <div class="mt-4 pt-4 border-t border-slate-200/80 dark:border-slate-700/60 space-y-2 text-sm">
-                    <div class="flex justify-between">
-                        <span class="text-slate-400">อาชีพ:</span>
-                        <span class="font-medium text-slate-700 dark:text-slate-200">กองช่าง อบต.</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400">เบอร์โทรศัพท์:</span>
-                        <a href="tel:0855624636" class="font-medium text-emerald-600 dark:text-emerald-400 hover:underline">085-562-4636</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mother Card -->
-            <div class="glass-card p-6 rounded-2xl relative overflow-hidden group hover:border-emerald-500/50 transition-all">
-                <div class="flex items-center gap-4">
-                    <div class="w-12 h-12 rounded-2xl bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 flex items-center justify-center text-xl shrink-0">
-                        <i class="fa-solid fa-user-nurse"></i>
-                    </div>
-                    <div>
-                        <span class="text-xs font-semibold text-teal-600 dark:text-teal-400 uppercase tracking-wider">ข้อมูลมารดา</span>
-                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">นางปรียา อารีเอื้อ</h3>
-                    </div>
-                </div>
-                <div class="mt-4 pt-4 border-t border-slate-200/80 dark:border-slate-700/60 space-y-2 text-sm">
-                    <div class="flex justify-between">
-                        <span class="text-slate-400">อาชีพ:</span>
-                        <span class="font-medium text-slate-700 dark:text-slate-200">แม่บ้าน</span>
-                    </div>
-                    <div class="flex justify-between">
-                        <span class="text-slate-400">เบอร์โทรศัพท์:</span>
-                        <a href="tel:0855967807" class="font-medium text-emerald-600 dark:text-emerald-400 hover:underline">085-596-7807</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-slate-100/70 dark:bg-slate-800/40 border-t border-slate-200/80 dark:border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-12">
-                <h2 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">ข้อมูลการติดต่อ</h2>
-                <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">Get in Touch</p>
-                <div class="w-12 h-1 bg-emerald-500 mx-auto mt-3 rounded-full"></div>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
-                
-                <!-- Phone -->
-                <a href="tel:0639728088" class="glass-card p-5 rounded-2xl flex flex-col items-center text-center group hover:border-emerald-500/50 transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <span class="text-xs text-slate-400 font-medium">โทรศัพท์</span>
-                    <span class="text-sm font-semibold text-slate-800 dark:text-slate-100 mt-1">063-972-8088</span>
-                </a>
-
-                <!-- Email -->
-                <a href="mailto:jutamatonkham@gmail.com" class="glass-card p-5 rounded-2xl flex flex-col items-center text-center group hover:border-emerald-500/50 transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <span class="text-xs text-slate-400 font-medium">อีเมล</span>
-                    <span class="text-xs font-semibold text-slate-800 dark:text-slate-100 mt-1 break-all">jutamatonkham@gmail.com</span>
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="glass-card p-5 rounded-2xl flex flex-col items-center text-center group hover:border-emerald-500/50 transition-all hover:-translate-y-1">
-                    <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center text-xl mb-3 group-hover:scale-110 transition-transform">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </div>
-                    <span class="text-xs text-slate-400 font-medium">Facebook</span>
-                    <span class="text-sm font-semibold text-slate-800 dark:text-slate-100 mt-1">Fxng Jutamat</span>
-                </a>
-
-                <!-- Line / IG -->
-                <div class="glass-card p-5 rounded-2xl flex flex-col items-center text-center group hover:border-emerald-500/50 transition-all">
-                    <div class="w-12 h-12 rounded-full bg-pink-100 dark:bg-pink-900/40 text-pink-600 dark:text-pink-400 flex items-center justify-center text-xl mb-3">
-                        <i class="fa-brands fa-instagram"></i>
-                    </div>
-                    <span class="text-xs text-slate-400 font-medium">Line / IG ID</span>
-                    <span class="text-sm font-semibold text-slate-800 dark:text-slate-100 mt-1">fxngp</span>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="py-8 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500">
-        <div class="max-w-6xl mx-auto px-4">
-            <p>&copy; 2026 นางสาวจุฑามาศ อ่อนคำ (Juthamat Onkham). All rights reserved.</p>
-            <p class="mt-1 text-slate-400">Academic Portfolio Built with Tailwind CSS</p>
-        </div>
+    <footer class="border-t border-slate-200/80 bg-white py-8 text-center text-xs text-slate-400">
+        <p>© Academic Portfolio - Jutamat Onkham. All rights reserved.</p>
     </footer>
 
-    <!-- Interactive Scripts -->
-    <script>
-        // Dark Mode Switcher Logic
-        const themeToggleBtn = document.getElementById('themeToggle');
-        
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-
-        themeToggleBtn.addEventListener('click', function() {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('color-theme', 'light');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('color-theme', 'dark');
-            }
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close Mobile Menu when clicking a link
-        document.querySelectorAll('#mobileMenu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-    </script>
 </body>
 </html>
